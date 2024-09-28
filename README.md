@@ -1,4 +1,4 @@
-# Starfield Creation Kit Setup Tool
+# Starfield Creation Kit Unpacker
 
 This tool is designed to make it easy to complete the setup process for the Starfield Creation Kit.
 
