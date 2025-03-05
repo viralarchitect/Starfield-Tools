@@ -10,26 +10,26 @@
     3. Unmanaged Plugins – those lacking "modId" and not in the official list.
   
   For each unmanaged plugin, the script:
-    - Builds the full path to the plugin file in the Starfield Data folder.
     - Constructs a manual search URL for Nexus Mods using the slugified plugin name.
-    - Outputs the manual search URL for the plugin.
+    - Constructs a manual search URL for Bethesda Creations using the slugified plugin name.
+    - Outputs the manual search URL for both so the user can copy-paste it into a browser.
   
   Errors (such as file not found) are logged to a log file in the script directory.
 
 .PARAMETER InputFile
-  Path to the JSON file exported from Vortex.
+  Path to the JSON file exported from Vortex. To export your load order from Vortex, go to the "Load Order" tab, click the down arrow next to the "Load Order" button, and select "Export Load Order". This is a required parameter.
 
 .PARAMETER OutputFile
   Path where the text report should be saved. Defaults to a timestamped file in the same directory as the InputFile.
 
 .PARAMETER StarfieldDataFolder
-  Path to the Starfield “Data” folder containing the plugin files.
+  Path to the Starfield “Data” folder containing the plugin files. Defaults to "D:\SteamLibrary\steamapps\common\Starfield\Data". You will likely need to change this to match your Starfield installation. Encase the path in double quotes to ensure the full path is provided to the script.
 
 .PARAMETER Debug
   Switch to enable verbose output for debugging purposes.
 
 .NOTES
-  This script helps users with a mix of creations and Nexus Mods to easily search their creations on Nexus Mods so they can be managed with Vortex or another mod manager instead of Bethesda Creations.
+  This script helps users with a mix of creations and Nexus Mods to easily search their creations on Nexus Mods or Bethesda Creations so they can be managed with Vortex or another mod manager instead of Bethesda Creations.
 #>
 
 param(
